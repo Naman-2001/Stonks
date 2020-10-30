@@ -238,7 +238,7 @@ const email = {
                           font-size: 24px;
                           line-height: 32px;
                         "
-                        ><a href='https://emostocks.vercel.app/'>Click here</a> to know more.
+                        ><a href='https://bandito-stonks-crypto.herokuapp.com/'>Click here</a> to know more.
                         <br><br>
                       </span>
 
@@ -261,7 +261,7 @@ const email = {
                         font-size: 24px;
                         line-height: 32px;
                       "
-                      >Team Stonks,
+                      >Team Stonks!
                       <br />
                     </span>
                         <div

@@ -161,7 +161,7 @@ var j = schedule.scheduleJob("0 0 * * * *", async function (fireDate) {
                 to: users[i].email,
                 from: {
                   email: process.env.SENDGRID_EMAIL,
-                  name: "EmoStock",
+                  name: "Stonks",
                 },
                 subject: `Stock update: ${companyArr[k].companyName}`,
                 text: ` `,
@@ -171,12 +171,10 @@ var j = schedule.scheduleJob("0 0 * * * *", async function (fireDate) {
                   status
                 ),
               };
-              // console.log(users[i].name, companyArr[k].companyName, status);
 
               await sgMail
                 .send(msg)
                 .then(async () => {
-                  // console.log("mail sent");
                   users[i].tracking[j].mailSent = true;
                   await users[i].save();
                 })

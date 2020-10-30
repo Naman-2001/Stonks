@@ -43,12 +43,22 @@ $ npm start
 
 ```
 
+## Instructions to run the frontend
+
+```
+$ git clone https://github.com/Naman-2001/Stonks.git
+$ cd Stonks
+$ cd frontend
+$ npm install
+$ npm start
+```
+
 ## Tech Stack and Services used
 
 - MERN STACK for the application
-- AWS S3 for document storage
-- FCM for web push notifications
-- Heroku and Netlify for deployments
+- Sendgrid for sending emails
+- IBM Watson NLU Library
+- Heroku for deployments
 
 ## Contributors
 
