@@ -5,7 +5,7 @@
 
 ---
 
-[![DOCS](https://img.shields.io/badge/Documentation-see%20docs-green?style=flat-square&logo=postman)](https://documenter.getpostman.com/view/12931122/TVYJ5GY6) [![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=react)](https://bandito-stonks-crypto.herokuapp.com/) [![DEMO](https://img.shields.io/badge/Demo-Checkout-red?style=flat-square&logo=youtube)]() [![PPT](https://img.shields.io/badge/PPT-Checkout-purple?style=flat-square&logo=powerpoint)](\)
+[![DOCS](https://img.shields.io/badge/Documentation-see%20docs-green?style=flat-square&logo=postman)](https://documenter.getpostman.com/view/12931122/TVYJ5GY6) [![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=react)](https://bandito-stonks-crypto.herokuapp.com/) [![DEMO](https://img.shields.io/badge/Demo-Checkout-red?style=flat-square&logo=youtube)](https://youtu.be/8Bcni6HW2B8) [![PPT](https://img.shields.io/badge/PPT-Checkout-purple?style=flat-square&logo=powerpoint)](https://drive.google.com/file/d/1Y7FFGo42ObJjqrayZOojzZWu557zrXac/view?usp=sharing)
 
 ## Features
 
