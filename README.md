@@ -1,4 +1,4 @@
-# Stonks
+# Stonks - Team Bandito - inGenius 2020
 
 > <Subtitle>
 > Stock market simplified
