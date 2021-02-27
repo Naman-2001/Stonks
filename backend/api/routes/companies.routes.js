@@ -9,4 +9,6 @@ router.get("/allAffected", companyControllers.getAffectedCompanies);
 //Get all companies listed on BSE and NSE
 router.get("/all", companyControllers.getAllCompanies);
 
+router.get("/proofOfConcept", companyControllers.proofOfConcept);
+
 module.exports = router;

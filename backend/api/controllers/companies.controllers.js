@@ -64,6 +64,55 @@ const getAffectedCompanies = async (req, res) => {
     });
 };
 
+const proofOfConcept = async (req, res) => {
+  let entitiesArr = [];
+  let companyArr = [];
+  const analyzeParams = {
+    url:
+      "https://economictimes.indiatimes.com/tech/tech-bytes/reliance-partners-google-facebook-in-seeking-nue-licence-from-rbi/articleshow/81237979.cms",
+    features: {
+      entities: {
+        limit: 200,
+        sentiment: true,
+      },
+    },
+  };
+  naturalLanguageUnderstanding
+    .analyze(analyzeParams)
+    .then((analysisResults) => {
+      const entities = analysisResults.result.entities;
+      for (i in entities) {
+        if (entities[i].type == "Company" && entities[i].sentiment.score != 0) {
+          entitiesArr.push(entities[i]);
+        }
+      }
+
+      for (i in companies) {
+        for (j in entitiesArr) {
+          if (
+            companies[i]["Company Name"].includes(entitiesArr[j].text) ||
+            companies[i]["Symbol"].includes(entitiesArr[j].text)
+          ) {
+            let obj = {};
+            obj.companyName = companies[i]["Company Name"];
+            obj.symbol = companies[i]["Symbol"];
+            obj.sentiment = entitiesArr[j].sentiment;
+            companyArr.push(obj);
+          }
+        }
+      }
+
+      res.status(200).json({
+        companies: companyArr,
+      });
+    })
+    .catch((err) => {
+      res.status(400).json({
+        error: err.toString(),
+      });
+    });
+};
+
 const getAllCompanies = async (req, res) => {
   res.status(200).json(companies);
 };
@@ -71,4 +120,5 @@ const getAllCompanies = async (req, res) => {
 module.exports = {
   getAffectedCompanies,
   getAllCompanies,
+  proofOfConcept,
 };
