@@ -81,13 +81,19 @@ router.get("/getCoinDetails", async (req, res) => {
 //Get all coins
 router.get("/allCoins", async (req, res) => {
   axios
-    .get("/https://gemini.com/api/all-prices/1d")
+    .get(
+      "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/listing?start=1&limit=20&sortBy=market_cap&sortType=desc&convert=USD&cryptoType=all&tagType=all"
+    )
     .then((response) => {
-      res.status(200).json(response);
+      let coins = response.data.data.cryptoCurrencyList;
+      res.status(200).json({
+        coins,
+      });
     })
     .catch((err) => {
       res.status(500).json({
         error: err.toString(),
+        err,
       });
     });
 });
