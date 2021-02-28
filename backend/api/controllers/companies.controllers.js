@@ -67,9 +67,9 @@ const getAffectedCompanies = async (req, res) => {
 const proofOfConcept = async (req, res) => {
   let entitiesArr = [];
   let companyArr = [];
+  const { checkingURL } = req.body;
   const analyzeParams = {
-    url:
-      "https://economictimes.indiatimes.com/tech/tech-bytes/reliance-partners-google-facebook-in-seeking-nue-licence-from-rbi/articleshow/81237979.cms",
+    url: checkingURL,
     features: {
       entities: {
         limit: 200,
